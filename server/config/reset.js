@@ -74,7 +74,7 @@ const createcustomitemTable = async () => {
   
     customfeatureData.forEach((feature) => {
       const insertQuery = {
-        text: 'INSERT INTO customefeature (category, feature, price, image) VALUES ($1, $2, $3, $4)'
+        text: 'INSERT INTO customfeature (category, feature, price, image) VALUES ($1, $2, $3, $4)'
       }
   
       const values = [
@@ -89,7 +89,7 @@ const createcustomitemTable = async () => {
           console.error('⚠️ error inserting feature', err)
           return
         }
-        console.log(`✅ ${feature.name} added successfully`)
+        console.log(`✅ ${feature.feature} added successfully`)
       })
     })
   }
