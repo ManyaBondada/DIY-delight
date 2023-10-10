@@ -1,5 +1,5 @@
 import express from 'express'
-import CustomFeatureController from '../controllers/customeFeature.js'
+import CustomFeatureController from '../controllers/customFeature.js'
 
 const router = express.Router()
 
