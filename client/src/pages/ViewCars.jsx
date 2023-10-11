@@ -12,7 +12,6 @@ const ViewCars = () => {
             try {
                 const data = await CustomItemAPI.getItems()
                 setItems(data.data)
-                console.log(items)
             } catch (error) {
                 throw error
             }
