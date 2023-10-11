@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // get 
 const getItems = () => axios.get('/api/items')
-const getItemById = () => axios.get(`/api/items/${id}`)
+const getItemById = (id) => axios.get(`/api/items/${id}`)
 
 // create, update, delete
 const createItem = (item) => request('POST', '/api/items', item)

@@ -5,5 +5,11 @@
 .summary-card{
     background: rgba(0, 0, 0, 0.5);
     padding: 50px;
-    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top:20px;
+}
+
+.summary-card:hover{
+    transform: scale(1.03);
 }
