@@ -31,7 +31,6 @@ const createcustomitemTable = async () => {
         text: 'INSERT INTO customitem (color, model, name) VALUES ($1, $2, $3)'
       }
       
-      // by default, this data will be empty but I'm leaving it here just in case
       const values = [
           item.color,
           item.model,
