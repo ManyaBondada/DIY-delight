@@ -13,7 +13,7 @@ const getItems = async (req, res) => {
 // get a specific item combo based on id
 const getItemById = async (req, res) => {
     try {
-      const itemId = req.params.itemId
+      const itemId = req.params.id
       const selectQuery = `SELECT color, model, name FROM customitem WHERE id = ${itemId}`
       const results = await pool.query(selectQuery)
   
@@ -31,7 +31,7 @@ const createItem = async (req, res) => {
         `INSERT INTO customitem (color, model, name) VALUES ($1, $2, $3) RETURNING *`,
          [color, model, name]
         )
-      res.status(201).json(results.rows) // results.rows[0]?
+      res.status(200).json(results.rows) // results.rows[0]?
     } catch (error) {
       res.status(400).json( { error: error.message } )
     }
@@ -40,13 +40,16 @@ const createItem = async (req, res) => {
 // update an existing item combo
 const updateItem = async (req, res) => {
     try {
-        const itemId = req.params.itemId
+      console.log("inside updateItem")
+
+        const itemId = req.params.id
+        console.log("itemId is " + itemId)
         const { color, model, name } = req.body
         const results = await pool.query(`
             UPDATE customitem SET color = $1, model = $2, name = $3 WHERE id = $4`,
             [color, model, name, itemId]
         )
-        res.status(200).json(results.rows)
+        res.status(201).json(results.rows)
     } catch (error) {
         res.status(409).json( { error: error.message } )
     }
@@ -56,7 +59,7 @@ const updateItem = async (req, res) => {
 // delete a specific item combo based on id
 const deleteGift = async (req, res) => {
     try {
-        const itemId = req.params.itemId
+        const itemId = req.params.id
         const results = await pool.query('DELETE FROM customitem WHERE id = $1', [itemId])
         res.status(200).json(results.rows[0])
     } catch (error) {

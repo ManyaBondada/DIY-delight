@@ -5,7 +5,7 @@ const router = express.Router()
 
 // get
 router.get('/items', CustomItemController.index)
-router.get('/items/:itemId', CustomItemController.show)
+router.get('/items/:id', CustomItemController.show)
 
 // create, update, delete an item
 router.post('/items', CustomItemController.create)
