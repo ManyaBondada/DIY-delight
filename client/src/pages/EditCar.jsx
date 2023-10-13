@@ -43,29 +43,29 @@ const EditCar = () => {
 
     return (
         <div>
-            <form onSubmit={handleOnSubmit}>
-            <h2>Edit Item Details</h2>
-            
-            <label htmlFor='name'>
-                Name
-                <input type='text' id='name' name='name' value={item.name} onChange={handleOnChange} />
-            </label>
+            <form className='edit-car-form' onSubmit={handleOnSubmit}>
+                <h2>Edit Item Details</h2>
+                
+                <label htmlFor='name'>
+                    Name
+                    <input type='text' id='name' name='name' value={item.name} onChange={handleOnChange} />
+                </label>
 
-            <label htmlFor='model'>
-                Model
-                <textarea id='model' name='model' value={item.model} onChange={handleOnChange} />
-            </label>
+                <label htmlFor='model'>
+                    Model
+                    <textarea id='model' name='model' value={item.model} onChange={handleOnChange} />
+                </label>
 
-            <label htmlFor='color'>
-                Color
-                <textarea id='color' name='color' value={item.color} onChange={handleOnChange} />
-            </label>
+                <label htmlFor='color'>
+                    Color
+                    <textarea id='color' name='color' value={item.color} onChange={handleOnChange} />
+                </label>
 
-            <div className='edit-buttons'>
-                <button type='submit'>Update</button>
-                <button onClick={handleOnDelete}>Delete</button>
-            </div>
-        </form>
+                <div className='edit-buttons'>
+                    <button type='submit'>Update</button>
+                    <button onClick={handleOnDelete}>Delete</button>
+                </div>
+            </form>
         </div>
     )
 }
