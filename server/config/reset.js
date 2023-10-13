@@ -56,7 +56,7 @@ const createcustomitemTable = async () => {
         category VARCHAR(255) NOT NULL,
         feature VARCHAR(255) NOT NULL,
         price VARCHAR(255) NOT NULL,
-        image VARCHAR(255) NOT NULL
+        image TEXT NOT NULL
       )
     `
   
