@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import '../css/EditCar.css'
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import CustomItemAPI from '../services/customItem.js'
