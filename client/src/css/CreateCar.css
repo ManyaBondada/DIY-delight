@@ -1,4 +1,14 @@
 .create-car-form{
     padding: 50px;
     color: white;
+    background-color:  rgba(0, 0, 0, 0.7);
+}
+
+.display-img{
+    width: 500px;
+    margin: 10px;
+}
+
+.img-container{
+    display: flex;
 }
